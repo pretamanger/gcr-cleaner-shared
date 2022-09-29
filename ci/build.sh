@@ -11,7 +11,7 @@ echo "Producing build.manifest"
 
 # Producing a manifest means we can easily track what was built, and use that info for later steps in the pipeline
 
-SERVICE_APPLICATION_NAME=" gcr-cleaner-shared"
+SERVICE_APPLICATION_NAME="gcr-cleaner-shared"
 GIT_SHORT_REVISION=$(git rev-parse --short --abbrev-commit HEAD)
 GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
