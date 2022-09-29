@@ -26,7 +26,7 @@
   "dependencies": {
     "@sentry/nextjs": "^6.16.1",
     "lodash.merge": "^4.6.2",
-    "next": "^12.0.7",
+    "next": "^12.1.0",
     "pino": "^7.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
