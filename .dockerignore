@@ -1,0 +1,12 @@
+node_modules
+.next
+.nvmrc
+Dockerfile
+docker-compose.yml
+.gitignore
+.git
+.github
+ci/
+.DS_Store
+.sentryclirc
+.env

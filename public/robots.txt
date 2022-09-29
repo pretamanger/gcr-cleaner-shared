@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+# Note: This file should only be present for the hello-world-ui service
+User-agent: *
+Disallow: /

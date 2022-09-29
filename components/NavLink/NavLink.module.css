@@ -1,0 +1,9 @@
+.navLink {
+  border-bottom: none;
+  text-decoration: none;
+  padding-bottom: 0.2rem;
+}
+
+.navLinkActive {
+  border-bottom: 0.4rem #0070f3 solid;
+}

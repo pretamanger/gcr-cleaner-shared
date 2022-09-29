@@ -1,0 +1,16 @@
+.container {
+  position: relative;
+}
+
+.summaryList {
+  list-style-position: inside;
+  padding: 0;
+}
+
+.errorMessage {
+  color: #f30000;
+  font-weight: bold;
+  padding: 0.2rem 0.4rem;
+  margin: 0 auto;
+  display: inline-block;
+}

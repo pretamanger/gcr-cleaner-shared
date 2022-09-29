@@ -1,0 +1,26 @@
+version: '2.4' # Using 2.4 as 3 does not make it easy to set resource limits on services which hampers perf testing
+services:
+  hello-world:
+    container_name: hello-world-ui
+    image: hello-world-ui
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PORT=3000
+    ports:
+      - '3000:3000'
+    networks:
+      app_net:
+        ipv4_address: 10.0.20.0
+    dns:
+      - 10.0.10.0
+    mem_limit: 750m
+
+networks:
+  app_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.0.0/8

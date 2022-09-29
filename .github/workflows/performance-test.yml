@@ -1,0 +1,39 @@
+name: performance-test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Run lighthouse web page accessibility, performance, and best practices tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: |
+          ./ci/install-dependencies.sh
+
+      - name: Run lighthouse accessibility, practices, and performance test of the web pages
+        run: |
+          sh ./ci/test.sh
+
+      - name: Compress lighthouse performance results
+        run: zip -r lighthouse-results.zip .lighthouseci
+
+      - name: Store performance results
+        uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-results.zip
+          path: lighthouse-results.zip

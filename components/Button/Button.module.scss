@@ -1,0 +1,21 @@
+.button {
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.1875;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 1rem auto;
+  padding: 0.6rem 1.6rem;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #0070f3;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten(#0070f3, 10);
+  }
+}

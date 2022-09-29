@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  max-width: 800px;
+}
+
+.navigation {
+  list-style: none;
+}
+
+.navigationItem {
+  list-style: none;
+  display: inline-block;
+  margin-right: 0.6rem;
+  padding-botton: 0.4rem;
+
+  &::after {
+    padding-left: 12px;
+    content: '|';
+  }
+
+  &:last-child {
+    &::after {
+      padding-left: 0;
+      content: '';
+    }
+  }
+
+  a {
+    color: #000;
+  }
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
